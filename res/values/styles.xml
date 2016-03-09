@@ -1,0 +1,119 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <!-- 传感器界面标题样式  -->
+	<style name="SensorTitle">
+	    <item name="android:layout_width">match_parent</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:textSize">28sp</item>
+	    <item name="android:textStyle">bold</item>
+	    <item name="android:textColor">@color/sensor_title_text</item>
+	    <item name="android:background">@color/sensor_title</item>
+	    <item name="android:paddingTop">4dp</item>
+	    <item name="android:paddingLeft">4dp</item>
+	    <item name="android:paddingBottom">4dp</item>
+	</style>
+	
+    <!-- 传感器样式  -->
+	<style name="SensorData">
+	    <item name="android:layout_width">match_parent</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:textSize">24sp</item>
+	    <item name="android:textColor">@color/sensor_data_text</item>
+	    <item name="android:background">@color/sensor_data</item>
+	    <item name="android:paddingTop">4dp</item>
+	    <item name="android:paddingLeft">4dp</item>
+	    <item name="android:paddingBottom">4dp</item>
+	</style>
+	
+	<style name="settingDlg" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <!-- 设置窗口浮动 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 设置无边框 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 设置无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 设置背景颜色 透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 是否模糊 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+    </style>
+    
+	
+    <!-- ListView标题栏样式 -->
+	<style name="styleListviewTitle">
+        <item name="android:gravity">center</item>
+	    <item name="android:textSize">16sp</item>
+	    <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/bg_lv_title</item>
+	</style>
+	
+	<!-- ListView条目Item样式 -->
+	<style name="styleListViewItem">
+        <item name="android:gravity">center</item>
+	    <item name="android:textSize">16sp</item>
+	    <item name="android:textColor">#FF000000</item>
+	    <item name="android:layout_marginTop">2dp</item>
+	    <item name="android:layout_marginBottom">2dp</item>
+	</style>
+	
+	<!-- activity_sms 内容样式 -->
+	<style name="styleActivitySms">
+        <item name="android:gravity">left|center_vertical</item>
+	    <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+	    <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+	    <item name="android:layout_marginLeft">10dp</item>
+	    <item name="android:layout_marginRight">10dp</item>
+	    <item name="android:background">@drawable/head_photo_bg_list</item>
+	</style>
+	<!-- activity_pref 内容样式 -->
+	<style name="styleActivityPref">
+        <item name="android:gravity">left|center_vertical</item>
+	    <item name="android:layout_marginLeft">10dp</item>
+	    <item name="android:layout_marginRight">10dp</item>
+	    <item name="android:background">@drawable/head_photo_bg_list</item>
+	</style>
+	
+	
+    <style name="chat_text_date_style">
+        <item name="android:padding">2dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">#bfbfbf</item>
+    </style>
+
+    <style name="chat_content_date_style">
+        <item name="android:minHeight">50dp</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">#bfbfbf</item>
+    </style>
+
+    <style name="chat_text_name_style">
+        <item name="android:textColor">#818181</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

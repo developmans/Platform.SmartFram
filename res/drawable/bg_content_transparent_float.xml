@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 上下阴影层 -->
+    <item
+        android:right="10dp" >
+        <shape android:shape="rectangle">
+            <gradient 
+                android:startColor="#80F1EFE0"
+                android:centerColor="#80615F60"
+                android:endColor="#80F1EFE0"
+                android:centerX="0.95"
+                android:angle="270"
+                android:type="linear" />
+
+            <!-- 圆角 -->
+            <corners android:radius="5dp" />
+
+        </shape>
+    </item>
+    <!-- 左右阴影层 -->
+    <!--item
+        android:bottom="10dp"
+        android:right="10dp" >
+        <shape android:shape="rectangle">
+            <gradient 
+                android:startColor="#80E1DFD0"
+                android:centerColor="#80615F60"
+                android:endColor="#80E1DFD0"
+                android:centerY="0.5"
+                android:angle="0"
+                android:type="linear" />
+                
+            <corners android:radius="5dp" />
+        </shape>
+    </item-->
+    <!-- 内容层 -->
+    <item
+        android:bottom="10dp"
+        android:right="10dp">
+        
+        <shape android:shape="rectangle">
+            
+            <solid android:color="#10FFFFFF" />
+            
+            <stroke
+                android:width="1px"
+                android:color="#00817F80" />
+
+            <padding
+                android:bottom="10dp"
+                android:right="10dp"/>
+            
+        </shape>
+    </item>
+
+</layer-list>

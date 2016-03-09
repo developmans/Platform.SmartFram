@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="blue">#ff00baf5</color>
+    <color name="text_hint_color">#ffdbdce2</color>
+    <color name="green">#ff00d707</color>
+    <color name="dark_blue">#FF0084CD</color>
+    <color name="light_blue">#ff5ac2ff</color>
+    <color name="blue_broken_line">#ff009abb</color>
+    <color name="blue_curve">#ff02a4f7</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ff66ff66</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="gray_release_start">#fffdfcf7</color>
+    <color name="gray_release_end">#fffefffc</color>
+    <color name="gray_release_center">#fffdfcf7</color>
+    <color name="gray_pressed_start">#ff6d6d6d</color>
+    <color name="gray_pressed_center">#ff6d6d6d</color>
+    <color name="gray_pressed_end">#ff6d6d6d</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    
+    
+    <color name="sensor_title">#c035C4FF</color>
+    <color name="sensor_title_text">#FF000000</color>
+    <color name="sensor_data">#C000d707</color>
+    <color name="sensor_data_text">#FFF9F9F8</color>    
+    <color name="sensor_data_text_alarm">#FFFF0101</color>
+    
+    <color name="green_light">#FF94CE1D</color>
+    
+    <color name="fragment_auto_ctrl_text_color">#FFF0F0F0</color>
+    <color name="fragment_auto_ctrl_text_color2">#ff00baf5</color>
+    <color name="fragment_man_ctrl_tvColor">#ffffffff</color>
+    
+</resources>

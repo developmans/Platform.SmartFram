@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:id="@+id/ll_div_service_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="1"
+            android:background="?android:attr/dividerHorizontal" />
+        <TextView
+            android:id="@+id/tv_div_console_setup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="@string/tv_div_service_state"
+            android:textColor="#FFEE2C2C"
+            android:textSize="16sp" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="24"
+            android:background="?android:attr/dividerHorizontal" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/styleActivityPref"
+        android:orientation="horizontal" >
+                
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_padding"
+            android:layout_marginBottom="@dimen/default_padding"
+            android:text="@string/tv_service_state"
+            android:textSize="@dimen/text_size_24" />
+        
+        <Button 
+            android:id="@+id/btServiceStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_service_start" 
+            android:textSize="@dimen/text_size_24" />
+        
+        <Button 
+            android:id="@+id/btServiceStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_service_stop" 
+            android:textSize="@dimen/text_size_24" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll_div_console_setup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="1"
+            android:background="?android:attr/dividerHorizontal" />
+        <TextView
+            android:id="@+id/tv_div_console_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="@string/tv_div_console_setup"
+            android:textColor="#FFEE2C2C"
+            android:textSize="16sp" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="24"
+            android:background="?android:attr/dividerHorizontal" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/styleActivityPref"
+        android:orientation="vertical" >
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_padding"
+            android:layout_marginBottom="@dimen/default_padding"
+            android:text="@string/tv_SerialportZigBee"
+            android:textSize="@dimen/text_size_24" />
+        <Spinner
+            android:id="@+id/spPortZigBee"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:entries="@array/serialport"
+            android:prompt="@string/tv_SerialportZigBee" />
+            
+        </LinearLayout>
+
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_padding"
+            android:layout_marginBottom="@dimen/default_padding"
+            android:text="@string/tv_SerialbaudZigBee"
+            android:textSize="@dimen/text_size_24" />
+        <Spinner
+            android:id="@+id/spBaudZigBee"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:entries="@array/serialbaud"
+            android:prompt="@string/tv_SerialbaudZigBee" />
+        
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll_div_service_log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="1"
+            android:background="?android:attr/dividerHorizontal" />
+        <TextView
+            android:id="@+id/tv_div_service_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="@string/tv_div_service_log"
+            android:textColor="#FFEE2C2C"
+            android:textSize="16sp" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="24"
+            android:background="?android:attr/dividerHorizontal" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        style="@style/styleActivityPref"
+        android:orientation="horizontal" >
+                
+        <EditText
+            android:id="@+id/etServiceLog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_padding"
+            android:layout_marginBottom="@dimen/default_padding"
+            android:layout_gravity="top|left"
+            android:gravity="top|left"
+            android:text="@string/tv_service_log"
+            android:textSize="@dimen/text_size_20"
+            android:cursorVisible="false"
+            android:inputType="none"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+        
+    </LinearLayout>
+    
+</LinearLayout>

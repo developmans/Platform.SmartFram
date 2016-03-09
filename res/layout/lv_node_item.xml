@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/tvNoItem"
+        style="@style/styleListViewItem"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvSensorTypeItem"
+        style="@style/styleListViewItem"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvCnaItem"
+        style="@style/styleListViewItem"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvCieeeItem"
+        style="@style/styleListViewItem"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvPnaItem"
+        style="@style/styleListViewItem"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvPieeeItem"
+        style="@style/styleListViewItem"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+    
+
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llDialogAddAdmin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/bg_dialog_down"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:text="名称："
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName" >
+
+            <requestFocus />
+        </EditText>
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:text="手机号："
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="phone" />
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="管理员权限："
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <CheckBox
+            android:id="@+id/cbPermission1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="接收通知"
+            android:textColor="@color/white" />
+
+        <CheckBox
+            android:id="@+id/cbPermission2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获取数据状态"
+            android:textColor="@color/white" />
+
+        <CheckBox
+            android:id="@+id/cbPermission3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送控制命令"
+            android:textColor="@color/white" />
+
+        <CheckBox
+            android:id="@+id/cbPermission4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="修改参数"
+            android:textColor="@color/white" />
+        
+    </LinearLayout>
+    
+    <ImageButton 
+        android:id="@+id/ibAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/bt_add_admin_dialog"
+        android:background="@null"/>
+</LinearLayout>

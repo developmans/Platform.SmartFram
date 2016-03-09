@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_common4"
+    android:baselineAligned="false" >
+    
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false"  >
+        
+        <LinearLayout 
+            android:id="@+id/llHeater"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_content_transparent_float"
+            android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvHeater"
+                style="@style/SensorTitle"
+                android:text="土壤加热器控制" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/sensorHeater" 
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/heater" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView 
+                android:id="@+id/tvHeaterSensorData"
+                style="@style/SensorData"
+                android:text="关闭"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+                
+        <LinearLayout 
+            android:id="@+id/llTitle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:gravity="center" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="智能农业大棚控制台"
+                android:textSize="40sp"
+                android:textColor="@color/viewfinder_frame"
+                android:textStyle="bold"
+                android:typeface="serif" />
+            <ImageButton 
+                android:id="@+id/ibFramSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_fram_control_panel" />
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/llFanAir"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_content_transparent_float"
+            android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvFanAir"
+                style="@style/SensorTitle"
+                android:text="通风控制" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/sensorFanAir" 
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/fan3" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView 
+                android:id="@+id/tvFanAirSensorData"
+                style="@style/SensorData"
+                android:text="关闭"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false"  >
+        
+        <LinearLayout 
+            android:id="@+id/llSoil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_content_transparent_float"
+            android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvThTransmitterRS485"
+                style="@style/SensorTitle"
+                android:text="大棚温湿度监控" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/sensorThTransmitterRS485" 
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/temp_humi" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView 
+                android:id="@+id/tvThTransmitterRS485SensorData"
+                style="@style/SensorData"
+                android:text="温度：    ℃   湿度： %"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+        
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false"  >
+        
+        <LinearLayout 
+            android:id="@+id/llSoil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_content_transparent_float"
+            android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvSoil"
+                style="@style/SensorTitle"
+                android:text="土壤温湿度监控" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/sensorSoil" 
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/soid_flowers" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView 
+                android:id="@+id/tvSoilSensorData"
+                style="@style/SensorData"
+                android:text="温度：    ℃   湿度： %"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+        
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            
+        <LinearLayout 
+            android:id="@+id/llWaterPump"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_content_transparent_float"
+            android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvWaterPump"
+                style="@style/SensorTitle"
+                android:text="水泵控制" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/sensorWaterPump" 
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/pipe"
+                android:background="@drawable/water_pump" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView 
+                android:id="@+id/tvWaterPumpSensorData"
+                style="@style/SensorData"
+                android:text="关闭"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+        
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            
+        <LinearLayout 
+            android:id="@+id/llCO2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_content_transparent_float"
+            android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvCO2"
+                style="@style/SensorTitle"
+                android:text="二氧化碳浓度监控" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/sensorCO2" 
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/co2" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView 
+                android:id="@+id/tvCO2SensorData"
+                style="@style/SensorData"
+                android:text="二氧化碳浓度：    ppm"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

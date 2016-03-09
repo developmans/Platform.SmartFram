@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_common5"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/tvActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/actionbar_blue_shadow"
+        android:drawableLeft="@drawable/ic_launcher2"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="48sp" />
+    
+    <TextView
+        android:id="@+id/tvLogo"
+        android:layout_below="@id/tvActionBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/logo_boxlab"
+        android:text="@string/tvLogo"
+        android:textSize="@dimen/text_size_32"
+        android:textStyle="bold"
+        android:textColor="@color/white" />
+    
+
+    <AnalogClock
+        android:id="@+id/analogClock1"
+        android:layout_below="@id/tvActionBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true" />
+    
+    <TextView
+        android:id="@+id/tvHomeTitle"
+        android:layout_below="@id/analogClock1"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="90dp"
+        android:paddingRight="90dp"
+        android:gravity="center_vertical"
+        android:text="@string/tvHomeTitle"
+        android:textSize="@dimen/text_size_48"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/alert_dialog_green_title" />
+    
+    <LinearLayout
+        android:id="@+id/llContainer" 
+        android:layout_below="@id/tvHomeTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="40dp"
+        android:paddingLeft="126dp"
+        android:paddingRight="126dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/alert_dialog_white_content"
+        android:orientation="vertical" >
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            
+        <Button 
+            android:id="@+id/btSmartHome"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:drawableTop="@drawable/bt_smart_home_launcher"
+            android:background="@color/transparent"
+            android:text="@string/btSmartHome"
+            android:textSize="@dimen/text_size_24"
+            android:textColor="@color/dark_blue" />
+        
+        <Button 
+            android:id="@+id/btSmartFarm"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:drawableTop="@drawable/bt_smart_farm_laucher"
+            android:background="@color/transparent"
+            android:text="@string/btSmartFarm"
+            android:textSize="@dimen/text_size_24"
+            android:textColor="@color/dark_blue" />
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal" >
+        
+        <Button 
+            android:id="@+id/btSmartSms"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:drawableTop="@drawable/bt_smart_next"
+            android:background="@color/transparent"
+            android:text="@string/btSmartSms"
+            android:textSize="@dimen/text_size_24"
+            android:textColor="@color/dark_blue" />
+        
+        <Button 
+            android:id="@+id/btSmartSetting"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:drawableTop="@drawable/bt_smart_setting"
+            android:background="@color/transparent"
+            android:text="@string/btSmartSetting"
+            android:textSize="@dimen/text_size_24"
+            android:textColor="@color/dark_blue" />
+        
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="LargestTextSize">30.0dip</dimen>
+    <dimen name="ConversationItemHeight">58.0dip</dimen>
+    <dimen name="LargeAvatarSize">56.0dip</dimen>
+    <dimen name="TitleTextSize">20.0dip</dimen>
+    <dimen name="LargeTextSize">18.0dip</dimen>
+    <dimen name="BasicTextSize">16.0dip</dimen>
+    <dimen name="SmallTextSize">14.0dip</dimen>
+    <dimen name="SmallerTextSize">12.0dip</dimen>
+    <dimen name="home_large_text">35.0dip</dimen>
+    <dimen name="text_size_20">20.0sp</dimen>
+    <dimen name="text_size_24">24.0sp</dimen>
+    <dimen name="text_size_28">28.0sp</dimen>
+    <dimen name="text_size_32">32.0sp</dimen>
+    <dimen name="text_size_36">36.0sp</dimen>
+    <dimen name="text_size_48">48.0sp</dimen>
+    <dimen name="home_score">30.0dip</dimen>
+    <dimen name="ecu_presure_marginTop">77.0dip</dimen>
+    <dimen name="ecu_large_text">25.0dip</dimen>
+    <dimen name="ecu_large_text_unit">20.0dip</dimen>
+    <dimen name="default_padding">8.0dip</dimen>
+    <dimen name="historyscore_tb">10.0dip</dimen>
+    <dimen name="historyscore_tb_small">6.0dip</dimen>
+    
+    <dimen name="loginingdlg_height">42dp</dimen>
+    <dimen name="loginingdlg_lr_margin">10dp</dimen>
+    <dimen name="loginingdlg_top_margin">20dp</dimen>
+    
+    <dimen name="SvbMargin">4dip</dimen>
+    
+    <dimen name="SvbTvTitlePadding">8dip</dimen>
+    <dimen name="SvbTvTitleTextSize">18sp</dimen>
+    <dimen name="SvbTvDataPadding">8dip</dimen>
+    <dimen name="SvbTvDataTextSize">18sp</dimen>
+    
+    <dimen name="fragment_auto_ctrl_vsbHeight">170dp</dimen>
+    <dimen name="fragment_auto_ctrl_textSize">16sp</dimen>
+    
+    <dimen name="fragment_man_ctrl_default_margin">4dp</dimen>
+    <dimen name="fragment_man_ctrl_tvPadding">4dip</dimen>
+    <dimen name="fragment_man_ctrl_tvSize">18sp</dimen>
+</resources>

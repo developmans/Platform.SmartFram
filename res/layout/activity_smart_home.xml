@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_common3"
+    android:baselineAligned="false" >
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false" >
+        
+        <LinearLayout 
+            android:id="@+id/llAvAnnuciator"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_content_transparent_float"
+            android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvAvAnnuciator"
+                style="@style/SensorTitle"
+                android:text="声光电报警器" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/sensorAvAnnuciator" 
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/annuciator" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView 
+                android:id="@+id/tvAvAnnuciatorSensorData"
+                style="@style/SensorData"
+                android:text="未检测到警报"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/llGasDetector"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_content_transparent_float"
+            android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvGasDetector"
+                style="@style/SensorTitle"
+                android:text="燃气检测" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/sensorGasDetector" 
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/gas_noextinguisher" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView 
+                android:id="@+id/tvGasDetectorSensorData"
+                style="@style/SensorData"
+                android:text="未检测到燃气"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/llIrDetector"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_content_transparent_float"
+            android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvIrDetector"
+                style="@style/SensorTitle"
+                android:text="人体红外探测"
+                android:drawableLeft="@drawable/human_detector" 
+                android:drawablePadding="4dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/sensorIrDetector" 
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/infrared_beam_sender" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView 
+                android:id="@+id/tvIrDetectorSensorData"
+                style="@style/SensorData"
+                android:text="未探测到人体"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/llIrFence"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_content_transparent_float"
+            android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvIrFence"
+                style="@style/SensorTitle"
+                android:text="入侵检测" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/sensorIrFence" 
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/infrared_beam_sensor" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView 
+                android:id="@+id/tvIrFenceData"
+                style="@style/SensorData"
+                android:text="未探测到入侵"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+        <LinearLayout 
+            android:id="@+id/llDoor"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_content_transparent_float"
+            android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvDoor"
+                style="@style/SensorTitle"
+                android:text="智能门锁"
+                android:drawableLeft="@drawable/sensor_setting_down" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/sensorDoor" 
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/door" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView 
+                android:id="@+id/tvDoorSensorData"
+                style="@style/SensorData"
+                android:text="门锁状态"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false"  >
+        
+        <LinearLayout 
+            android:id="@+id/llThTransmitterRS232"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_content_transparent_float"
+            android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvThTransmitterRS232"
+                style="@style/SensorTitle"
+                android:text="室内温湿度监测"
+                android:drawableLeft="@drawable/sensor_setting_down" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/sensorThTransmitterRS232" 
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/temperature" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView 
+                android:id="@+id/tvThTransmitterRS232SensorData"
+                style="@style/SensorData"
+                android:text="温度：  湿度：  凝露点"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/llFan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_content_transparent_float"
+            android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvFan"
+                style="@style/SensorTitle"
+                android:text="风扇控制"
+                android:drawableLeft="@drawable/sensor_setting_down" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/sensorFan" 
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/fan2" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView 
+                android:id="@+id/tvFanSensorData"
+                style="@style/SensorData"
+                android:text="关闭"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/llLight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_content_transparent_float"
+            android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvLight"
+                style="@style/SensorTitle"
+                android:text="照明控制"
+                android:drawableLeft="@drawable/sensor_setting_down" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/sensorLight" 
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/lamp_bulb_off" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView 
+                android:id="@+id/tvLightSensorData"
+                style="@style/SensorData"
+                android:text="关闭"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/llWinCurtain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_content_transparent_float"
+            android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvWinCurtain"
+                style="@style/SensorTitle"
+                android:text="窗帘控制"
+                android:drawableLeft="@drawable/sensor_setting_down" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/sensorWinCurtain" 
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/curtain" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView 
+                android:id="@+id/tvWinCurtainSensorData"
+                style="@style/SensorData"
+                android:text="窗帘关闭"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/llBH1750FVI"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_content_transparent_float"
+            android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvBH1750FVI"
+                style="@style/SensorTitle"
+                android:text="室内光线监测"
+                android:drawableLeft="@drawable/sensor_setting_down" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/sensorBH1750FVI" 
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/light_monitor2" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView 
+                android:id="@+id/tvBH1750FVISensorData"
+                style="@style/SensorData"
+                android:text="光强："
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"  >
+        
+        <LinearLayout 
+            android:id="@+id/llIrRemotetCrt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_content_transparent_float"
+            android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvIrRemotetCrt"
+                style="@style/SensorTitle"
+                android:text="红外遥控设备"
+                android:drawableLeft="@drawable/sensor_setting_down" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/sensorIrRemotetCrt" 
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/remote_ctr" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView 
+                android:id="@+id/tvIrRemotetCrtData"
+                style="@style/SensorData"
+                android:text="设备"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/llLfRfid"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_content_transparent_float"
+            android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvLfRfid"
+                style="@style/SensorTitle"
+                android:text="射频识别"
+                android:drawableLeft="@drawable/sensor_setting_down" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/sensorLfRfid" 
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rfid_tag" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView 
+                android:id="@+id/tvLfRfidData"
+                style="@style/SensorData"
+                android:text="卡号"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical" >
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

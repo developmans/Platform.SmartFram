@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">智能实训台</string>
+    <string name="service_name">ZigBee数据解析服务</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="tvLogo">\t\t厦门铂士莱\n信息科技有限公司</string>
+    
+    <string name="tvHomeTitle">智能工控实训平台</string>
+    
+    <string name="btSmartHome">智能家居</string>
+    <string name="btSmartFarm">智慧农业</string>
+    <string name="btSmartSetting">系统设置 </string>
+    <string name="btSmartSms">后台管理</string>
+    
+    <!-- activity_preference -->
+    <string name="tv_div_service_state">后台服务设置</string>
+    <string name="tv_service_state">服务状态：</string>
+    <string name="bt_service_start">保留</string>
+    <string name="bt_service_stop">关闭</string>
+    
+    <!-- activity_sms -->
+    <string name="tv_div_list_administrators">管理员设置</string>
+    <string name="tv_div_sms_log">短信记录</string>
+    
+    <string name="tv_div_console_setup">网关端口设置</string>
+    <string name="tv_SerialportZigBee">ZigBee端口号选择：</string>
+	<string name="tv_SerialbaudZigBee">ZigBee波特率选择：</string>
+	
+    <string name="tv_div_service_log">日记区域</string>
+    <string name="tv_service_log">Log</string>
+    
+    <string name="tvAvAnnuciator">声光电报警器</string>
+    
+    <string name="SvbTvTitleText">离线状态</string>
+    <string name="SvbTvDataText">尚未加入网络，暂无数据</string>
+    
+    <string name="SvbTvTitleHeater">大棚温度加热器</string>
+    <string name="SvbTvTitleThTransmitterRS485">大棚温湿度检测</string>
+    <string name="SvbTvTitleLight">植物生长灯</string>
+    <string name="SvbTvTitleBH1750FVI">环境光强检测</string>
+    <string name="SvbTvTitleWaterPump">灌溉水泵</string>
+    <string name="SvbTvTitleSoil">土壤温湿度检测</string>
+    <string name="SvbTvTitleFan">大棚通风装置</string>
+    <string name="SvbTvTitleCO2">CO2温室气体浓度</string>
+    <string name="SvbTvTitleRollBlind">大棚卷帘装置</string>
+    
+</resources>

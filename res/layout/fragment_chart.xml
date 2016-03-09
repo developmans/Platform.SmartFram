@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!--
+         com.db.chart.view.ChartView
+        xmlns:chart="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        chart:chart_axisBorderSpacing="dp"
+        chart:chart_axisColor="color"
+        chart:chart_axisThickness="dp"
+        chart:chart_axisTopSpacing="dp"
+        chart:chart_axisX="boolean"
+        chart:chart_fontSize="dp"
+        chart:chart_label="boolean"
+        chart:chart_labelColor="color"
+        chart:chart_shadowColor="color"
+        chart:chart_shadowDx="dp"
+        chart:chart_shadowDy="dp"
+        chart:chart_shadowRadius="dp"
+        chart:chart_typeface="typeface" /-->
+        
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="数据可视化"
+        android:textSize="22sp"
+        android:typeface="monospace" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="节点："
+            android:textSize="18sp"
+            android:typeface="monospace" />
+
+        <Spinner
+            android:id="@+id/spNodeSelect"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+        
+        <TextView
+            android:id="@+id/tvStartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="起始时间：2015-10-15 下午 6:30"
+            android:textSize="18sp"
+            android:typeface="monospace" />
+        
+        <Button
+            android:id="@+id/btChangeTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="修改"
+            android:textSize="16sp"
+            android:typeface="monospace"
+            android:background="@drawable/button_green" />
+        
+    </LinearLayout>
+
+    <com.db.chart.view.LineChartView
+        xmlns:chart="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/linechart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        chart:chart_axisBorderSpacing="0dp"
+        chart:chart_axisColor="@color/blue"
+        chart:chart_fontSize="12sp"
+        chart:chart_shadowColor="#AF000000"
+        chart:chart_shadowDy="5dp"
+        chart:chart_shadowRadius="3dp" >
+    </com.db.chart.view.LineChartView>
+
+</LinearLayout>

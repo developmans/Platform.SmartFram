@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_common6"
+    android:gravity="center"
+    android:orientation="horizontal" >
+    
+    <LinearLayout 
+        android:id="@+id/llCtrlRollBlind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_margin="@dimen/fragment_man_ctrl_default_margin"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView 
+            android:id="@+id/tvCtrlRollBlind" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/alert_dialog_green_title"
+            android:text="卷帘控制"
+            android:textSize="@dimen/fragment_man_ctrl_tvSize"
+            android:textColor="@color/fragment_man_ctrl_tvColor" />
+        <LinearLayout 
+            android:id="@+id/llCtrlRollBlindSlide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/alert_dialog_white_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+        <ImageButton 
+            android:id="@+id/imCtrlRollBlindUp" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/head_photo_bg"
+            android:src="@drawable/bt_roll_blind_up_selector"
+            android:text="收起" />
+        <ImageButton
+            android:id="@+id/imCtrlRollBlindStop" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/head_photo_bg"
+            android:src="@drawable/minus_alt"
+            android:text="停止" />
+        <ImageButton 
+            android:id="@+id/imCtrlRollBlindDown" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/head_photo_bg"
+            android:src="@drawable/bt_roll_blind_down_selector"
+            android:text="展开" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/llCtrlHeater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_margin="@dimen/fragment_man_ctrl_default_margin"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView 
+            android:id="@+id/tvCtrlHeater" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/alert_dialog_green_title"
+            android:text="加热器"
+            android:textSize="@dimen/fragment_man_ctrl_tvSize"
+            android:textColor="@color/fragment_man_ctrl_tvColor" />
+        <LinearLayout 
+            android:id="@+id/llCtrlHeaterSlide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/alert_dialog_white_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+        <ImageView 
+            android:id="@+id/imCtrlHeater" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fragment_man_ctrl_default_margin"
+            android:src="@drawable/fragment_man_ctrl_temp"/>
+        <CheckBox 
+            android:id="@+id/cbCtrlHeater" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fragment_man_ctrl_default_margin"
+            android:button="@null"
+            android:background="@drawable/bt_switcher"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/llCtrlSunlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_margin="@dimen/fragment_man_ctrl_default_margin"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView 
+            android:id="@+id/tvCtrlSunlight" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/alert_dialog_green_title"
+            android:text="植物灯"
+            android:textSize="@dimen/fragment_man_ctrl_tvSize"
+            android:textColor="@color/fragment_man_ctrl_tvColor" />
+        <LinearLayout 
+            android:id="@+id/llCtrlSunlightSlide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/alert_dialog_white_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+        <ImageView 
+            android:id="@+id/imCtrlSunlight" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fragment_man_ctrl_default_margin"
+            android:src="@drawable/fragment_man_ctrl_sun" />
+        <CheckBox 
+            android:id="@+id/cbCtrlSunlight" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_margin="@dimen/fragment_man_ctrl_default_margin"
+            android:button="@null"  
+            android:background="@drawable/bt_switcher" />
+        </LinearLayout>
+    </LinearLayout>
+        
+    <LinearLayout 
+        android:id="@+id/llCtrlWater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_margin="@dimen/fragment_man_ctrl_default_margin"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView 
+            android:id="@+id/tvCtrlWater" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/alert_dialog_green_title"
+            android:text="水泵"
+            android:textSize="@dimen/fragment_man_ctrl_tvSize"
+            android:textColor="@color/fragment_man_ctrl_tvColor" />
+        <LinearLayout 
+            android:id="@+id/llCtrlWaterSlide"  
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/alert_dialog_white_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+        <ImageView 
+            android:id="@+id/imCtrlWater" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fragment_man_ctrl_default_margin"
+            android:src="@drawable/fragment_man_ctrl_rain" />
+        <CheckBox 
+            android:id="@+id/cbCtrlWater" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_margin="@dimen/fragment_man_ctrl_default_margin"
+            android:button="@null"  
+            android:background="@drawable/bt_switcher" />
+        </LinearLayout>
+    </LinearLayout>
+            
+    <LinearLayout 
+        android:id="@+id/llCtrlFan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_margin="@dimen/fragment_man_ctrl_default_margin"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView 
+            android:id="@+id/tvCtrlFan" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/alert_dialog_green_title"
+            android:text="通风器"
+            android:textSize="@dimen/fragment_man_ctrl_tvSize"
+            android:textColor="@color/fragment_man_ctrl_tvColor" />
+        <LinearLayout 
+            android:id="@+id/llCtrlFanSlide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/alert_dialog_white_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+        <ImageView 
+            android:id="@+id/imCtrlFan" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fragment_man_ctrl_default_margin"
+            android:src="@drawable/fragment_man_ctrl_cycle" />
+        <CheckBox 
+            android:id="@+id/cbCtrlFan" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_margin="@dimen/fragment_man_ctrl_default_margin"
+            android:button="@null"  
+            android:background="@drawable/bt_switcher" />
+        </LinearLayout>
+    </LinearLayout>
+    
+</LinearLayout>

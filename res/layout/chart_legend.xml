@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@drawable/edit_group_member"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="图例注解1"
+        android:textSize="14sp"
+        android:textColor="@color/green_light"
+        android:typeface="monospace" />
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="图例注解2"
+        android:textSize="14sp"
+        android:textColor="@color/blue_curve"
+        android:typeface="monospace" />
+    
+
+</LinearLayout>

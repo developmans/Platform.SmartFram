@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:boxlab="http://schemas.android.com/apk/res/com.boxlab.platform"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"  >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:background="@drawable/bg_common4"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:layoutAnimation="@anim/list_anim_layout_right" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+            
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:layout_margin="@dimen/default_padding"
+            android:orientation="vertical" >
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/bg_svb_title"
+                android:text="温控子系统"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:typeface="sans"/>
+            
+        <LinearLayout 
+            android:id="@+id/llSubSystemTempCtl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_padding"
+            android:background="@drawable/bg_container"
+            android:orientation="vertical" >
+            
+            <com.boxlab.view.SensorViewBase 
+                android:id="@+id/svHeater"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/SvbMargin"
+                boxlab:title="@string/SvbTvTitleHeater"
+                boxlab:sensorIcon="@drawable/heater"
+                boxlab:platformType="farm" >
+            </com.boxlab.view.SensorViewBase>
+            
+            <com.boxlab.view.SensorViewBase 
+                android:id="@+id/svThTransmitterRS485"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/SvbMargin"
+                boxlab:title="@string/SvbTvTitleThTransmitterRS485"
+                boxlab:sensorIcon="@drawable/thermometer" 
+                boxlab:platformType="farm" >
+            </com.boxlab.view.SensorViewBase>
+            
+        </LinearLayout>
+        </LinearLayout>
+
+        
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:layout_margin="@dimen/default_padding"
+            android:orientation="vertical" >
+        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/bg_svb_title"
+                android:text="照明子系统"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:typeface="sans"/>
+            
+        <LinearLayout 
+            android:id="@+id/llSubSystemLightCtl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_padding"
+            android:background="@drawable/bg_container"
+            android:orientation="vertical" >
+            
+            <com.boxlab.view.SensorViewBase 
+                android:id="@+id/svLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/SvbMargin"
+                boxlab:title="@string/SvbTvTitleLight"
+                boxlab:sensorIcon="@drawable/lamp_bulb_off"
+                boxlab:platformType="farm"  >
+            </com.boxlab.view.SensorViewBase>
+            
+            <com.boxlab.view.SensorViewBase 
+                android:id="@+id/svBH1750FVI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/SvbMargin"
+                boxlab:title="@string/SvbTvTitleBH1750FVI"
+                boxlab:sensorIcon="@drawable/sunflower"
+                boxlab:platformType="farm"  >
+            </com.boxlab.view.SensorViewBase>
+            
+        </LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:layout_margin="@dimen/default_padding"
+            android:orientation="vertical" >
+        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/bg_svb_title"
+                android:text="灌溉子系统"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:typeface="sans"/>
+            
+        <LinearLayout
+            android:id="@+id/llSubSystemWaterCtl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_padding"
+            android:background="@drawable/bg_container"
+            android:orientation="vertical" >
+            
+            <com.boxlab.view.SensorViewBase
+                android:id="@+id/svWaterPump"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/SvbMargin" 
+                boxlab:title="@string/SvbTvTitleWaterPump"
+                boxlab:sensorIcon="@drawable/pipe"
+                boxlab:platformType="farm" >
+            </com.boxlab.view.SensorViewBase>
+            
+            <com.boxlab.view.SensorViewBase
+                android:id="@+id/svSoil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/SvbMargin"
+                boxlab:title="@string/SvbTvTitleSoil"
+                boxlab:sensorIcon="@drawable/temp_humi"
+                boxlab:platformType="farm" >
+            </com.boxlab.view.SensorViewBase>
+            
+        </LinearLayout>
+        </LinearLayout>
+        
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+        
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:layout_margin="@dimen/default_padding"
+            android:orientation="vertical" >
+        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/SvbMargin"
+                android:background="@drawable/bg_svb_title"
+                android:text="温室气体监控"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:typeface="sans"/>
+            
+        <LinearLayout 
+            android:id="@+id/llSubSystemCO2Ctl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_padding"
+            android:background="@drawable/bg_container"
+            android:orientation="vertical" >
+            
+            <com.boxlab.view.SensorViewBase 
+                android:id="@+id/svFan"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/SvbMargin"
+                boxlab:title="@string/SvbTvTitleFan"
+                boxlab:sensorIcon="@drawable/fan3"
+                boxlab:platformType="farm" >
+            </com.boxlab.view.SensorViewBase>
+            
+            <com.boxlab.view.SensorViewBase 
+                android:id="@+id/svCO2"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/SvbMargin"
+                android:layout_marginRight="@dimen/SvbMargin"
+                boxlab:title="@string/SvbTvTitleCO2"
+                boxlab:sensorIcon="@drawable/co"
+                boxlab:platformType="farm" >
+            </com.boxlab.view.SensorViewBase>
+            
+        </LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:layout_margin="@dimen/default_padding"
+            android:orientation="vertical" >
+        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/SvbMargin"
+                android:background="@drawable/bg_svb_title"
+                android:text="卷帘控制"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:typeface="sans"/>
+            
+        <LinearLayout 
+            android:id="@+id/llSubSystemRollBlindCtl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_padding"
+            android:background="@drawable/bg_container"
+            android:orientation="horizontal" >
+            
+            <com.boxlab.view.SensorViewBase 
+                android:id="@+id/svRollBlind"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/SvbMargin"
+                boxlab:title="@string/SvbTvTitleRollBlind"
+                boxlab:sensorIcon="@drawable/shutter"
+                boxlab:platformType="farm"  >
+            </com.boxlab.view.SensorViewBase>
+            
+        </LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:layout_margin="@dimen/default_padding"
+            android:orientation="vertical" >
+        
+        </LinearLayout>
+        
+        </LinearLayout>
+            
+        </LinearLayout>
+        
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:orientation="vertical" >
+    
+        <LinearLayout
+            android:id="@+id/llTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_actionbar3" >
+        
+            <ImageButton
+                android:id="@+id/ibFramSetting"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/folder_android" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="智慧农业系统控制台"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/llContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFEFEFEF"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal"
+            android:baselineAligned="false" >
+
+            <ListView
+                android:id="@+id/lvSettingMenu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/head_photo_bg_list"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:footerDividersEnabled="false"
+                android:scrollbars="none"
+                android:divider="#FF101010"
+                android:layoutAnimation="@anim/list_anim_layout_right" />
+            
+            <FrameLayout
+                android:id="@+id/node_detail_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="3"
+                android:background="@drawable/head_photo_bg_list"
+                android:layoutAnimation="@anim/list_anim_layout_right" />
+        
+        </LinearLayout>
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_auto_ctrl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_fragment_auto"
+    android:layoutAnimation="@anim/list_anim_layout_right"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/bg_svb_title"
+            android:text="反馈控制  参数设置"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/bg_content_transparent_float"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:text="温度上限"
+                android:textColor="@color/fragment_auto_ctrl_text_color2"
+                android:textSize="@dimen/fragment_auto_ctrl_textSize" />
+
+            <com.boxlab.view.VerticalSeekBar
+                android:id="@+id/vsbTup"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/fragment_auto_ctrl_vsbHeight"
+                android:progress="250"
+                android:max="500" />
+
+            <TextView
+                android:id="@+id/tvTup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25.0"
+                android:textColor="@color/fragment_auto_ctrl_text_color"
+                android:textSize="@dimen/fragment_auto_ctrl_textSize" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:text="温度下限"
+                android:textColor="@color/fragment_auto_ctrl_text_color2"
+                android:textSize="@dimen/fragment_auto_ctrl_textSize" />
+
+            <com.boxlab.view.VerticalSeekBar
+                android:id="@+id/vsbTdown"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/fragment_auto_ctrl_vsbHeight"
+                android:progress="200"
+                android:max="500" />
+
+            <TextView
+                android:id="@+id/tvTdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="20.0"
+                android:textColor="@color/fragment_auto_ctrl_text_color"
+                android:textSize="@dimen/fragment_auto_ctrl_textSize" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:text="湿度上限"
+                android:textColor="@color/fragment_auto_ctrl_text_color2"
+                android:textSize="@dimen/fragment_auto_ctrl_textSize" />
+
+            <com.boxlab.view.VerticalSeekBar
+                android:id="@+id/vsbHup"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/fragment_auto_ctrl_vsbHeight"
+                android:progress="650"
+                android:max="1000" />
+
+            <TextView
+                android:id="@+id/tvHup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="65.0"
+                android:textColor="@color/fragment_auto_ctrl_text_color"
+                android:textSize="@dimen/fragment_auto_ctrl_textSize" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:text="湿度下限"
+                android:textColor="@color/fragment_auto_ctrl_text_color2"
+                android:textSize="@dimen/fragment_auto_ctrl_textSize" />
+
+            <com.boxlab.view.VerticalSeekBar
+                android:id="@+id/vsbHdown"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/fragment_auto_ctrl_vsbHeight"
+                android:progress="400"
+                android:max="1000" />
+
+            <TextView
+                android:id="@+id/tvHdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="40.0"
+                android:textColor="@color/fragment_auto_ctrl_text_color"
+                android:textSize="@dimen/fragment_auto_ctrl_textSize" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:text="浓度上限"
+                android:textColor="@color/fragment_auto_ctrl_text_color2"
+                android:textSize="@dimen/fragment_auto_ctrl_textSize" />
+
+            <com.boxlab.view.VerticalSeekBar
+                android:id="@+id/vsbCup"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/fragment_auto_ctrl_vsbHeight"
+                android:progress="650"
+                android:max="1000" />
+
+            <TextView
+                android:id="@+id/tvCup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="650"
+                android:textColor="@color/fragment_auto_ctrl_text_color"
+                android:textSize="@dimen/fragment_auto_ctrl_textSize" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:text="浓度下限"
+                android:textColor="@color/fragment_auto_ctrl_text_color2"
+                android:textSize="@dimen/fragment_auto_ctrl_textSize" />
+
+            <com.boxlab.view.VerticalSeekBar
+                android:id="@+id/vsbCdown"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/fragment_auto_ctrl_vsbHeight"
+                android:progress="600"
+                android:max="1000" />
+
+            <TextView
+                android:id="@+id/tvCdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="600"
+                android:textColor="@color/fragment_auto_ctrl_text_color"
+                android:textSize="@dimen/fragment_auto_ctrl_textSize" />
+            
+        </LinearLayout>
+        
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:text="光强上限"
+                android:textColor="@color/fragment_auto_ctrl_text_color2"
+                android:textSize="@dimen/fragment_auto_ctrl_textSize" />
+
+            <com.boxlab.view.VerticalSeekBar
+                android:id="@+id/vsbLup"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/fragment_auto_ctrl_vsbHeight"
+                android:progress="600"
+                android:max="1000" />
+
+            <TextView
+                android:id="@+id/tvLup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="600"
+                android:textColor="@color/fragment_auto_ctrl_text_color"
+                android:textSize="@dimen/fragment_auto_ctrl_textSize" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:text="光强下限"
+                android:textColor="@color/fragment_auto_ctrl_text_color2"
+                android:textSize="@dimen/fragment_auto_ctrl_textSize" />
+
+            <com.boxlab.view.VerticalSeekBar
+                android:id="@+id/vsbLdown"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/fragment_auto_ctrl_vsbHeight"
+                android:progress="300"
+                android:max="1000" />
+
+            <TextView
+                android:id="@+id/tvLdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="600"
+                android:textColor="@color/fragment_auto_ctrl_text_color"
+                android:textSize="@dimen/fragment_auto_ctrl_textSize"  />
+            
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

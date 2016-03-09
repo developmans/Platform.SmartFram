@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_actionbar3"
+        android:text="智慧农业系统 后台管理"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:typeface="monospace" />
+
+    <LinearLayout
+        android:id="@+id/ll_div_list_administrators"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="1"
+            android:background="?android:attr/dividerHorizontal" />
+
+        <TextView
+            android:id="@+id/tv_div_list_administrators"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="@string/tv_div_list_administrators"
+            android:textColor="#FFEE2C2C"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="24"
+            android:background="?android:attr/dividerHorizontal" />
+        
+        <ImageButton
+                android:id="@+id/imAddAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/add_contact" />
+        
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="1"
+            android:background="?android:attr/dividerHorizontal" />
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        style="@style/styleActivitySms"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/tvAdminList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_svb_title"
+            android:gravity="center"
+            android:text="管理员列表"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+        
+        <LinearLayout
+            android:id="@+id/llAdminListTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/styleListviewTitle"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="ID" />
+
+            <TextView
+                style="@style/styleListviewTitle"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="名称" />
+
+            <TextView
+                style="@style/styleListviewTitle"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="手机号码" />
+            
+            <TextView
+                style="@style/styleListviewTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="权限(获取传感器状态/控制节点)" />
+        </LinearLayout>
+        
+        <ListView
+            android:id="@+id/lvAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutAnimation="@anim/list_anim_layout_right" >
+            
+        </ListView>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll_div_sms_log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"  >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="1"
+            android:background="?android:attr/dividerHorizontal" />
+        <TextView
+            android:id="@+id/tv_div_sms_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="@string/tv_div_sms_log"
+            android:textColor="#FFEE2C2C"
+            android:textSize="16sp" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="24"
+            android:background="?android:attr/dividerHorizontal" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        style="@style/styleActivitySms"
+        android:orientation="vertical" >
+        
+        <ListView
+            android:id="@+id/lvSmsDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutAnimation="@anim/list_anim_layout_right"
+            android:transcriptMode="alwaysScroll" >
+        </ListView>
+
+    </LinearLayout>
+    
+    
+</LinearLayout>
