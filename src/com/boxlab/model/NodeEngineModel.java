@@ -1,15 +1,18 @@
 package com.boxlab.model;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 import android.content.BroadcastReceiver.PendingResult;
 import android.content.Context;
 
+import com.boxlab.bean.SourceBean;
 import com.boxlab.bean.ZigBeeBean;
 import com.boxlab.bean.SensorBean;
 import com.boxlab.database.SQLiteHelper;
 import com.boxlab.database.SQLiteNetInfoDAL;
 import com.boxlab.database.SQLiteSensorInfoDal;
+import com.boxlab.database.SQLiteSourceInfoDAL;
 
 /** 
  * @author Next 
@@ -25,10 +28,12 @@ public class NodeEngineModel implements INodeEngineModel {
 	
 	private SQLiteNetInfoDAL mNetInfoDAL;
 	private SQLiteSensorInfoDal mSensorInfoDAL;
+	private SQLiteSourceInfoDAL mSourceInfoDAL;
 
 	public NodeEngineModel(Context pContext) {
 		this.mNetInfoDAL = SQLiteNetInfoDAL.getInstance(pContext);
 		this.mSensorInfoDAL = SQLiteSensorInfoDal.getInstance(pContext);
+		this.mSourceInfoDAL = SQLiteSourceInfoDAL.getInstance(pContext);
 	}
 
 	/**
@@ -68,6 +73,14 @@ public class NodeEngineModel implements INodeEngineModel {
 	public ArrayList<SensorBean> loadSensorBeans(SensorBean s, int n) {
 		return mSensorInfoDAL.load(s.iCna, n);
 	}
+	
+	/**
+	 * 从数据库中加载所有传感器数据
+	 */
+	@Override
+	public ArrayList<SensorBean> loadSensorBeans(String startTime,String stopTime) {
+		return mSensorInfoDAL.load(startTime,stopTime);
+	}
 
 	/**
 	 * 将iCna节点的传感器数据保存到数据库中
@@ -86,5 +99,29 @@ public class NodeEngineModel implements INodeEngineModel {
 		mNetInfoDAL.delete(iCna);
 	}
 
-	
+	@Override
+	public void saveSourceBean(SourceBean s) {
+		mSourceInfoDAL.saveCompleteSourceInfoBean(s);
+	}
+
+	@Override
+	public ArrayList<SourceBean> loadSourceBeans() {
+		return mSourceInfoDAL.load();
+	}
+
+	@Override
+	public void updateSourceBean(SourceBean s) {
+		mSourceInfoDAL.update(s);
+	}
+
+	@Override
+	public void deleteSourceBeans(Map<Integer, String> sourceBeans) {
+		mSourceInfoDAL.delete(sourceBeans);
+	}
+
+	@Override
+	public SourceBean load(String rfid) {
+		return mSourceInfoDAL.load(rfid);
+	}
+
 }

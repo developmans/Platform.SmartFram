@@ -105,6 +105,18 @@
             android:gravity="center_horizontal" >
         
         <Button 
+            android:id="@+id/btSourceManage"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:drawableTop="@drawable/bt_smart_next"
+            android:background="@color/transparent"
+            android:text="@string/btSourceManage"
+            android:textSize="@dimen/text_size_24"
+            android:textColor="@color/dark_blue" />
+        
+        <Button 
             android:id="@+id/btSmartSms"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"

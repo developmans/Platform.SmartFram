@@ -79,7 +79,7 @@ public class Sensor implements Serializable {
 			updataSensorData(this);
 		}
 	}
-	
+
 	public static void updataSensorType(Sensor sensor, SensorBean sbean) {
 		sensor.sSensorType = StringUtil.getStringFormatS_TP(sbean.iSensorType);
 	}
@@ -740,7 +740,7 @@ public class Sensor implements Serializable {
 				+ "\n  节点地址     : " + StringUtil.getHexStringFormatShort(this.sBean.iCna) 
 				+ "\n  传感器类型  : " + this.sSensorType
 				+ "\n  传感器数据  : " + this.sSensorData
-//				+ "\n  Power Level:" + StringUtil.getStringFormatPowerLevel(this.iPower) 
+//				+ "\n  Power Level:" + this.sPower
 				;
 	}
 	

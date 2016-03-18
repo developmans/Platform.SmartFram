@@ -3,6 +3,7 @@ package com.boxlab.view;
 import java.util.ArrayList;
 
 import com.boxlab.bean.Sensor;
+import com.boxlab.ndk.LEDScreenCtrl;
 import com.boxlab.platform.BasicApp;
 import com.boxlab.platform.ServiceProxy;
 import com.boxlab.platform.R;
@@ -202,12 +203,14 @@ public class SensorViewBase extends LinearLayout {
 						&& SmartLogic.sensorLight != null
 						&& SmartLogic.sensorLight.Bool == true) {
 					Log.e(TAG, "光强超过上限，关闭植物灯");
+					showPromptInfo("光强超过上限，关闭植物灯");
 					ctrState = 0;
 				}
 				if ((((int) mBoundSensor.Light) < SmartLogic.iLightdown)
 						&& SmartLogic.sensorLight != null
 						&& SmartLogic.sensorLight.Bool == false) {
 					Log.e(TAG, "光强低于下限，打开植物灯");
+					showPromptInfo("光强低于下限，打开植物灯");
 					ctrState = 1;
 				}
 				if (ctrState != -1) {
@@ -302,13 +305,15 @@ public class SensorViewBase extends LinearLayout {
 				if ((((int) mBoundSensor.Concentration) > SmartLogic.iCup)
 						&& SmartLogic.sensorFan != null
 						&& SmartLogic.sensorFan.Bool == true) {
-					Log.e(TAG, "CO2浓度超过上限");
+					Log.e(TAG, "二氧化碳浓度超过上限");
+					showPromptInfo("二氧化碳浓度超过上限");
 					ctrState = 1;
 				}
 				if ((((int) mBoundSensor.Concentration) < SmartLogic.iCdown)
 						&& SmartLogic.sensorFan != null
 						&& SmartLogic.sensorFan.Bool == false) {
-					Log.e(TAG, "CO2浓度低于下限");
+					Log.e(TAG, "二氧化碳浓度低于下限");
+					showPromptInfo("二氧化碳浓度低于下限");
 					ctrState = 0;
 				}
 				if (ctrState != -1) {
@@ -331,13 +336,14 @@ public class SensorViewBase extends LinearLayout {
 						&& SmartLogic.sensorWaterPump != null
 						&& SmartLogic.sensorWaterPump.Bool == true) {
 					Log.e(TAG, "土壤湿度超过上限，关闭水泵");
+					showPromptInfo("土壤湿度超过上限，关闭水泵");
 					ctrState = 0;
 				}
 				if (iHumi < SmartLogic.iHdown
 						&& SmartLogic.sensorWaterPump != null
 						&& SmartLogic.sensorWaterPump.Bool == false) {
-
 					Log.e(TAG, "土壤湿度低于下限，打开水泵");
+					showPromptInfo("土壤湿度低于下限，打开水泵");
 					ctrState = 1;
 				}
 				if (ctrState != -1) {
@@ -397,12 +403,14 @@ public class SensorViewBase extends LinearLayout {
 				if (iTemp > SmartLogic.iTup && SmartLogic.sensorHeater != null
 						&& SmartLogic.sensorHeater.Bool == true) {
 					Log.e(TAG, "大棚温度超过上限，关闭加热器");
+					showPromptInfo("大棚温度超过上限，关闭加热器");
 					ctrState = 0;
 				}
 				if (iTemp < SmartLogic.iTdown
 						&& SmartLogic.sensorHeater != null
 						&& SmartLogic.sensorHeater.Bool == false) {
 					Log.e(TAG, "大棚温度低于下限，打开加热器");
+					showPromptInfo("大棚温度低于下限，打开加热器");
 					ctrState = 1;
 				}
 				if (ctrState != -1) {
@@ -529,6 +537,15 @@ public class SensorViewBase extends LinearLayout {
 	public void onSensorViewDestory() {
 		Log.e(TAG, "onSensorViewDestory:" + this.sTitle);
 		SharedPreferencesUtil.saveSensorView(this);
+	}
+	
+	/**
+	 * 将提示发送到LED显示屏和语音报警
+	 * 
+	 */
+	private void showPromptInfo(String info){
+		BasicApp.getLedscreen().display(info, LEDScreenCtrl.RED);
+		BasicApp.getVoiceCtrl().display(info);
 	}
 
 }

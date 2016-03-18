@@ -115,6 +115,33 @@ public class SQLiteSensorInfoDal {
 	}
 	
 	/**
+	 * 查找所有C_NA为iCna的SensorInfoBean
+	 */
+	public ArrayList<SensorBean> load(String startTime, String stopTime){ 
+		ArrayList<SensorBean> arr = new ArrayList<SensorBean>();
+		Cursor cursor=null;
+		if(!"".equals(stopTime)){
+			cursor= this.mSQLiteHelper.getReadableDatabase().
+				rawQuery("select * from " + TABLE_NAME + " where TIMESTAMP Between ? and  ? ",new String[]{startTime,stopTime});  
+		}else{
+			cursor= this.mSQLiteHelper.getReadableDatabase().
+					rawQuery("select * from " + TABLE_NAME + " where TIMESTAMP >= ? ",new String[]{startTime});  
+		}
+		while (cursor.moveToNext()){  
+			SensorBean s = new SensorBean();
+			s.id = cursor.getInt(cursor.getColumnIndex("ID"));
+			s.iCna = cursor.getInt(cursor.getColumnIndex("C_NA"));
+			s.iSensorType = cursor.getInt(cursor.getColumnIndex("SENSOR_TYPE"));
+			s.aSensorData = cursor.getBlob(cursor.getColumnIndex("SENSOR_DATA"));
+			s.iPower = cursor.getInt(cursor.getColumnIndex("POWER"));
+			s.sTimeStamp=cursor.getString(cursor.getColumnIndex("TIMESTAMP"));
+			arr.add(s);
+		}
+		cursor.close();
+		return arr;  
+	}
+	
+	/**
 	 * 根据节点地址iCna加载指定数量的的SensorInfoBean
 	 */
 	public ArrayList<SensorBean> load(int iCna, int n){ 

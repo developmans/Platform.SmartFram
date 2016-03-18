@@ -14,6 +14,7 @@
     <string name="btSmartFarm">智慧农业</string>
     <string name="btSmartSetting">系统设置 </string>
     <string name="btSmartSms">后台管理</string>
+    <string name="btSourceManage">溯源管理</string>
     
     <!-- activity_preference -->
     <string name="tv_div_service_state">后台服务设置</string>
@@ -46,5 +47,29 @@
     <string name="SvbTvTitleFan">大棚通风装置</string>
     <string name="SvbTvTitleCO2">CO2温室气体浓度</string>
     <string name="SvbTvTitleRollBlind">大棚卷帘装置</string>
+    
+    <!-- activity_source -->
+    <string name="tv_choose">选择操作</string>
+    <string name="rb_radioAdd">添加</string>
+    <string name="rb_radioUpdate">修改/收获</string>
+    <string name="rb_radioDelete">删除</string>
+    <string name="rb_radioSelect">查询</string>
+    <string name="tv_rfid">卡号</string>
+    <string name="ed_rfid">刷卡获取卡号</string>
+    <string name="tv_varieties">品种</string>
+    <string name="ed_varieties">输入品种</string>
+    <string name="tv_region">种植区域</string>
+    <string name="ed_region">选择种植区域</string>
+    <string name="tv_plant">种植日期</string>
+    <string name="ed_plant">选择种植时间</string>
+    <string name="tv_harvest">收获日期</string>
+    <string name="ed_harvest">选择收获日期</string>
+    <string name="bt_submit">确认</string>
+    <string name="id">序号</string>
+    <string name="c_na">节点地址</string>
+    <string name="sensor_type">节点类型</string>
+    <string name="sensor_data">节点数据</string>
+    <string name="power">电力</string>
+    <string name="timestamp">日期</string>
     
 </resources>

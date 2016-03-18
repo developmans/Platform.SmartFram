@@ -1,7 +1,9 @@
 package com.boxlab.model;
 
 import java.util.ArrayList;
+import java.util.Map;
 
+import com.boxlab.bean.SourceBean;
 import com.boxlab.bean.ZigBeeBean;
 import com.boxlab.bean.SensorBean;
 
@@ -24,7 +26,15 @@ public interface INodeEngineModel {
 	public void saveSensorBean(SensorBean s);
 	
 	public ArrayList<SensorBean> loadSensorBeans(SensorBean s, int n);
+	public ArrayList<SensorBean> loadSensorBeans(String startTime,String stopTime);
 	
 	public void deleteNode(int nodeaddr);
+	
+	public void saveSourceBean(SourceBean s);
+	public ArrayList<SourceBean> loadSourceBeans();
+	public SourceBean load(String rfid);
+	public void updateSourceBean(SourceBean s);
+	public void deleteSourceBeans(Map<Integer, String> sourceBeans);
+	
 	
 }

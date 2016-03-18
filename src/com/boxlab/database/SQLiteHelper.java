@@ -43,12 +43,14 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 		Log.i(TAG, "onCreate()创建数据库表");
 		db.execSQL(SQLiteDataBaseConfig.TABLE_DDL_NET_INFO);
 		db.execSQL(SQLiteDataBaseConfig.TABLE_DDL_SENSOR_INFO);
+		db.execSQL(SQLiteDataBaseConfig.TABLE_DDL_SOURCE_INFO);
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + SQLiteDataBaseConfig.TABLE_NAME_NET_INFO);
         db.execSQL("DROP TABLE IF EXISTS " + SQLiteDataBaseConfig.TABLE_NAME_SENSOR_INFO);
+        db.execSQL("DROP TABLE IF EXISTS " + SQLiteDataBaseConfig.TABLE_DDL_SOURCE_INFO);
         onCreate(db);
 	}
 	

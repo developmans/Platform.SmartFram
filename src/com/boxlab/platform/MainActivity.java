@@ -1,6 +1,7 @@
 package com.boxlab.platform;
 
 
+import com.boxlab.ndk.LEDScreenCtrl;
 import com.boxlab.platform.R;
 
 import android.os.Bundle;
@@ -18,21 +19,23 @@ public class MainActivity extends Activity {
 	private Button btSmartFarm;
 	private Button btSmartSetting;
 	private Button btSmartSms;
+	private Button btSourceManage;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-				
 		btSmartHome = (Button) findViewById(R.id.btSmartHome);
 		btSmartFarm = (Button) findViewById(R.id.btSmartFarm);
 		btSmartSetting = (Button) findViewById(R.id.btSmartSetting);
 		btSmartSms = (Button) findViewById(R.id.btSmartSms);
+		btSourceManage=(Button) findViewById(R.id.btSourceManage);
 		
 		btSmartHome.setOnClickListener(mOnClickListener);
 		btSmartFarm.setOnClickListener(mOnClickListener);
 		btSmartSetting.setOnClickListener(mOnClickListener);
 		btSmartSms.setOnClickListener(mOnClickListener);
+		btSourceManage.setOnClickListener(mOnClickListener);
 		
 		Intent intent = new Intent(MainActivity.this, ServiceProxy.class);
 		startService(intent);
@@ -108,6 +111,11 @@ public class MainActivity extends Activity {
 				intent = new Intent(MainActivity.this, ActivityPreference.class);
         		startActivity(intent);
         		//Messenger rMessenger = new Messenger(service);  
+				break;
+				
+			case R.id.btSourceManage:
+				intent = new Intent(MainActivity.this, ActivitySourceManage.class);
+        		startActivity(intent);
 				break;
 
 			default:

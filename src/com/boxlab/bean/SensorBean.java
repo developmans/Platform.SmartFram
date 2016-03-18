@@ -62,6 +62,14 @@ public class SensorBean {
 		iPower = power;
 	}
 
+	public String getsTimeStamp() {
+		return sTimeStamp;
+	}
+
+	public void setsTimeStamp(String sTimeStamp) {
+		this.sTimeStamp = sTimeStamp;
+	}
+
 	@Override
 	public String toString() {
 		return "-----------------------节点传感器原始数据-----------------------"

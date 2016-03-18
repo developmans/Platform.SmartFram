@@ -21,6 +21,13 @@
         <item>57600</item>
         <item>115200</item>
     </string-array>
+    <!-- 区域选择 -->
+    <string-array name="region">
+        <item>区域1</item>
+        <item>区域2 </item>
+        <item>区域3</item>
+        <item>区域4</item>
+    </string-array>
     
     
 </resources>
